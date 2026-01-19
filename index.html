@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login" name="login" id="login">
+            <div class="form1" name="form1" id="form1">
+                <span class="signin">Sign In</span><br>
+                <div class="icon">
+                  <span class="fa-brands fa-google-plus-g"></span>
+                </div>
+                <div class="icon facebook">
+                    <span class="fa-brands fa-facebook-f"></span>
+                </div>
+                <div class="icon github">
+                    <span class="fa-brands fa-github"></span>
+                </div> 
+                <div class="icon linkdin">
+                    <span class="fa-brands fa-linkedin-in"></span>
+                </div> 
+                <span style="position: absolute; top:145px; left:55px;font-size: 14px; font-family: 'Poppins', sans-serif; color: rgb(56, 56, 56);">or use your email password</span>
+                <input type="text" placeholder="Enter your Email" class="email"><br>
+                <input type="password" placeholder="Enter your Password" class="email password" id="password1" name="password1"><br>
+                <button class="icon lock" onclick="show2('in')" id="showpass" value="show">
+                    <span class="fa-solid fa-lock" id="lock1"></span>
+                    <span class="fa-solid fa-lock-open" id="lock2" style="display:none;"></span>
+                </button>
+                <a href="#" style="position: absolute; top:285px; left:80px;font-size: 14px; font-family: 'Poppins', sans-serif; text-decoration: none; color: rgb(56, 56, 56);">Forget Your Password?</a>
+                
+             <button class="button">SIGN IN</button> 
+            </div>
+            <div class="form2" name="form2" id="form2">
+                <span class="createac">Create Account</span><br>
+                <div class="icon">
+                  <span class="fa-brands fa-google-plus-g"></span>
+                </div>
+                <div class="icon facebook">
+                    <span class="fa-brands fa-facebook-f"></span>
+                </div>
+                <div class="icon github">
+                    <span class="fa-brands fa-github"></span>
+                </div> 
+                <div class="icon linkdin">
+                    <span class="fa-brands fa-linkedin-in"></span>
+                </div>  
+                <span style="position: absolute; top:145px; left:55px;font-size: 14px; font-family: 'Poppins', sans-serif; color: rgb(56, 56, 56);">or use your email for registration</span>
+                <input type="text" placeholder="Enter your Full Name" class="name1"><br>
+                <input type="text" placeholder="Enter your Email" class="email1"><br>
+                <input type="password" id="password2" class="email1 password2" placeholder="Create Password">
+                <div class="icon lock3" onclick="show2('up')" id="showpass_up" value="show">
+                    <span class="fa-solid fa-lock" id="lock3"></span>
+                    <span class="fa-solid fa-lock-open" id="lock4" style="display:none;"></span>
+                </div>
+             <button class="button2">SIGN UP</button> 
+            </div>
+        </div>
+        <div class="signup" name="signup" id="signup">
+            <div class="form3" name="form3" id="form3">
+                 <span class="hello">Hello, Friend!</span>
+                     <span style="position: absolute; top:165px; left:20px;font-size: 14px; font-family: 'Poppins', sans-serif; color:white; justify-content: center; text-align:center;">
+                       Register with your personal details to use all of site features
+                     </span>     
+                 <button onclick="swap1()" class="button3">SIGN UP</button> 
+            </div>
+            <div class="form4" name="form4" id="form4">
+                 <span class="welcome">Welcome Back!</span>
+                     <span style="position: absolute; top:165px; left:20px;font-size: 14px; font-family: 'Poppins', sans-serif; color:white; justify-content: center; text-align:center;">
+                       Enter your personal details to use all of site features
+                     </span>     
+                 <button onclick="swap()" class="button3">SIGN IN</button> 
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
