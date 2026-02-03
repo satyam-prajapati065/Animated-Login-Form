@@ -1,4 +1,4 @@
-    const hide = document.querySelector('.lock1');
+
     function swap(){
            signup.style.right="0px";
            login.style.left="0px";
@@ -26,26 +26,24 @@
            form4.style.left="20px";
     }
     function show2(type) {
-        let passField, l1, l2;
-
-        if (type === 'in') {
-            passField = document.getElementById('password1');
-            l1 = document.getElementById('lock1'); 
-            l2 = document.getElementById('lock2'); 
-        } else {
-            passField = document.getElementById('password2');
-            l1 = document.getElementById('lock3'); 
-            l2 = document.getElementById('lock4'); 
-        }
-
-        // Toggle Logic
-        if (passField.type === "password") {
-            passField.setAttribute("type", "text");
-            l1.style.display = "none";
-            l2.style.display = "inline-block";
-        } else {
-            passField.setAttribute("type", "password");
-            l1.style.display = "inline-block";
-            l2.style.display = "none";
-        }
+    let passwordField, lockClosed, lockOpen;
+    if (type === 'in') {
+        passwordField = document.getElementById('password1');
+        lockClosed = document.getElementById('lock1');
+        lockOpen = document.getElementById('lock2');
+    } else if (type === 'up') {
+        passwordField = document.getElementById('password2');
+        lockClosed = document.getElementById('lock3');
+        lockOpen = document.getElementById('lock4');
     }
+
+    if (passwordField.type === "password") {
+        passwordField.type = "text"; 
+        lockClosed.style.display = "none";
+        lockOpen.style.display = "block";
+    } else {
+        passwordField.type = "password";
+        lockClosed.style.display = "block";
+        lockOpen.style.display = "none";
+    }
+}
